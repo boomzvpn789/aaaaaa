@@ -108,11 +108,11 @@ show_menu() {
     echo "========================================="
     echo "          Server Setup Menu              "
     echo "========================================="
-    echo "1. Install and configure OpenVPN"
-    echo "2. Change SSH port"
-    echo "3. Setup WebSocket with SSL"
-    echo "4. Setup DNS Slow"
-    echo "5. Exit"
+    echo "1. สร้าง OpenVPN"
+    echo "2. สร้าง SSH SSL"
+    echo "3. สร้าง WebSocket"
+    echo "4. สร้าง slow DNS"
+    echo "5. ออกจาก สคริป"
     echo "========================================="
 }
 
