@@ -102,15 +102,23 @@ EOF
     echo "DNS Slow configured on port 53."
 }
 
-# เมนูหลัก
-while true; do
-    echo "Select an option:"
+# ฟังก์ชันแสดงเมนู
+show_menu() {
+    clear
+    echo "========================================="
+    echo "          Server Setup Menu              "
+    echo "========================================="
     echo "1. Install and configure OpenVPN"
     echo "2. Change SSH port"
     echo "3. Setup WebSocket with SSL"
     echo "4. Setup DNS Slow"
     echo "5. Exit"
+    echo "========================================="
+}
 
+# เมนูหลัก
+while true; do
+    show_menu
     read -p "Enter your choice [1-5]: " choice
 
     case $choice in
