@@ -134,16 +134,16 @@ show_user_expiry() {
 show_menu() {
     clear
     echo "========================================="
-    echo "          Server Setup Menu              "
+    echo "          จัดทำโดย เจฟ.เจฟ              "
     echo "========================================="
-    echo "1. Install OpenVPN"
-    echo "2. Change SSH Port"
-    echo "3. Set Up WebSocket"
-    echo "4. Set Up DNS"
-    echo "5. Install V2Ray"
-    echo "6. Create User"
-    echo "7. Show User Expiration"
-    echo "8. Exit Script"
+    echo "1. สร้าง OpenVPN"
+    echo "2. สร้าง SSH SSL"
+    echo "3. สร้าง  WebSocket"
+    echo "4. สร้าง DNS"
+    echo "5. สร้าง V2Ray"
+    echo "6. สร้าง ชื่อผู้ใช้"
+    echo "7. แสดง ชื่อผู้ใช้"
+    echo "8. ออกจาก สคริป"
     echo "========================================="
 }
 
