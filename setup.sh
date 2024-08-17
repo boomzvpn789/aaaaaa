@@ -128,7 +128,7 @@ clear
     wget -q -O /root/cf "${CDN}/cf" >/dev/null 2>&1
     chmod +x /root/cf
     bash /root/cf | tee /root/install.log
-    print_success "Domain Random Done"
+    print_success "โดเมน สุ่มเสร็จ แล้ว"
 	elif test $dns -eq 2; then
     read -rp "ป้อน โดเมน ของคุณ : " dom
     echo "$dom" > /root/scdomain
