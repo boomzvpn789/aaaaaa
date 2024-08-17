@@ -130,7 +130,7 @@ clear
     bash /root/cf | tee /root/install.log
     print_success "Domain Random Done"
 	elif test $dns -eq 2; then
-    read -rp "Enter Your Domain : " dom
+    read -rp "ป้อน โดเมน ของคุณ : " dom
     echo "$dom" > /root/scdomain
 	echo "$dom" > /etc/xray/scdomain
 	echo "$dom" > /etc/xray/domain
