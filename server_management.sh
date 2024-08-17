@@ -41,7 +41,7 @@ show_system_info() {
     echo -e "${WHITE}IP VPS${NC}                 : 103.230.121.56" | center_text $width
     echo -e "${WHITE}โดเมน${NC}                  : th.nurul.cloud" | center_text $width
     echo -e "${WHITE}สถานะโดเมน${NC}            : ตลอดชีพ" | center_text $width
-    echo -e "${WHITE}ชื่อผู้ใช้งาน${NC}           : EKROMVPN SSH AIO" | center_text $width
+    echo -e "${WHITE}ชื่อผู้ใช้งาน${NC}           : Koala VPN | center_text $width
 }
 
 # Function: Show Menu
