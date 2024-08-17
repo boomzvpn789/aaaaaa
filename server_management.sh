@@ -10,77 +10,48 @@ CYAN='\033[0;36m'
 WHITE='\033[1;37m'
 NC='\033[0m' # No Color
 
-# Get Terminal Dimensions
-get_terminal_width() {
-    tput cols
-}
-
-# Center Text Function
-center_text() {
-    local text="$1"
-    local width="$2"
-    printf "%*s\n" $(( (width + ${#text}) / 2 )) "$text"
-}
-
 # Function: Show Header
 show_header() {
-    local width=$(get_terminal_width)
-    center_text "${BLUE}═══════════════════════════════════════════════════════════════════════════════${NC}" $width
-    center_text "${MAGENTA}                           ชุนชน เจฟ.เจฟ SSH V2RAY                          ${NC}" $width
-    center_text "${BLUE}═══════════════════════════════════════════════════════════════════════════════${NC}" $width
+    echo -e "${BLUE}══════════════════════════════════════════════════════════════════════════════════════════${NC}"
+    echo -e "${MAGENTA}                           ชุนชน เจฟ.เจฟ SSH V2RAY                          ${NC}"
+    echo -e "${BLUE}══════════════════════════════════════════════════════════════════════════════════════════${NC}"
 }
 
 # Function: Show System Info
 show_system_info() {
-    local width=$(get_terminal_width)
-    echo -e "${WHITE}ระบบปฏิบัติการ${NC}           : Ubuntu 20.04.6 LTS" | center_text $width
-    echo -e "${WHITE}เคอร์เนล${NC}                : 5.4.0-192-generic" | center_text $width
-    echo -e "${WHITE}RAM ใช้งาน${NC}              : 11.76%" | center_text $width
-    echo -e "${WHITE}โหลด CPU${NC}               : 11.8%" | center_text $width
-    echo -e "${WHITE}เวลาใช้งานเซิร์ฟเวอร์${NC}     : up 2 minutes" | center_text $width
-    echo -e "${WHITE}IP VPS${NC}                 : 103.230.121.56" | center_text $width
-    echo -e "${WHITE}โดเมน${NC}                  : th.nurul.cloud" | center_text $width
-    echo -e "${WHITE}สถานะโดเมน${NC}            : ตลอดชีพ" | center_text $width
-    echo -e "${WHITE}ชื่อผู้ใช้งาน${NC}           : Koala VPN | center_text $width
+    echo -e "${WHITE}ระบบปฏิบัติการ${NC}                : Ubuntu 20.04.6 LTS"
+    echo -e "${WHITE}เคอร์เนล${NC}                     : 5.4.0-192-generic"
+    echo -e "${WHITE}RAM ใช้งาน${NC}                   : 11.76%"
+    echo -e "${WHITE}โหลด CPU${NC}                    : 11.8%"
+    echo -e "${WHITE}เวลาใช้งานเซิร์ฟเวอร์${NC}        : up 2 minutes"
+    echo -e "${WHITE}IP VPS${NC}                      : 103.230.121.56"
+    echo -e "${WHITE}โดเมน${NC}                       : th.nurul.cloud"
+    echo -e "${WHITE}สถานะโดเมน${NC}                 : ตลอดชีพ"
+    echo -e "${WHITE}ชื่อผู้ใช้งาน${NC}                : EKROMVPN SSH AIO"
 }
 
 # Function: Show Menu
 show_menu() {
-    local width=$(get_terminal_width)
-    center_text "${BLUE}═══════════════════════════════════════════════════════════════════════════════${NC}" $width
-    center_text "${CYAN}1. สร้างชื่อผู้ใช้ SSH OVPN           8. ข้อมูลฮาร์ดแวร์ VPS${NC}" $width
-    center_text "${CYAN}2. สร้างชื่อผู้ใช้ VMESS              9. ข้อมูลโค้ด VPS${NC}" $width
-    center_text "${CYAN}3. สร้างชื่อผู้ใช้ VLESS              10. ทดสอบความเร็ว${NC}" $width
-    center_text "${CYAN}4. จัดการ TROJAN                     11. เปลี่ยนโดเมน${NC}" $width
-    center_text "${CYAN}5. จัดการ SHADOWSOCKS                12. เปลี่ยนแบรนด์เนอร์${NC}" $width
-    center_text "${CYAN}6. ระบบที่กำลังทำงาน                13. รีสตาร์ทบริการ${NC}" $width
-    center_text "${CYAN}7. สำรองและกู้คืน                   14. รีสตาร์ทเซิร์ฟเวอร์${NC}" $width
-    center_text "${CYAN}15. เปลี่ยน DNS                     16. ตรวจสอบ NETFLIX${NC}" $width
-    center_text "${CYAN}17. SWAP RAM                        18. เปลี่ยน XRAYCORE${NC}" $width
-    center_text "${CYAN}19. ติดตั้ง UDP                      20. ติดตั้ง BBRPLUS${NC}" $width
-    center_text "${BLUE}═══════════════════════════════════════════════════════════════════════════════${NC}" $width
-    echo -e "กรุณาเลือกคำสั่งจากเมนู [1-20]: " | center_text $width
+    echo -e "${BLUE}══════════════════════════════════════════════════════════════════════════════════════════${NC}"
+    echo -e "${CYAN}         ███████╗██╗░░██╗███████╗███████╗██╗░░░██╗██╗███████╗███████╗${NC}"
+    echo -e "${CYAN}         ██╔════╝██║░░██║██╔════╝██╔════╝██║░░░██║██║██╔════╝██╔════╝${NC}"
+    echo -e "${CYAN}         █████╗░███████║█████╗░░█████╗░░██║░░░██║██║█████╗░░█████╗░${NC}"
+    echo -e "${CYAN}         ██╔══╝░██╔══██║██╔══╝░░██╔══╝░░██║░░░██║██║██╔══╝░░██╔══╝░${NC}"
+    echo -e "${CYAN}         ███████╗██║░░██║███████╗███████╗╚██████╔╝██║███████╗███████╗${NC}"
+    echo -e "${BLUE}══════════════════════════════════════════════════════════════════════════════════════════${NC}"
+    echo -e "${YELLOW}            [1] สร้างชื่อผู้ใช้ SSH OVPN      ${YELLOW}[8] ข้อมูลฮาร์ดแวร์ VPS${NC}"
+    echo -e "${YELLOW}            [2] สร้างชื่อผู้ใช้ VMESS         ${YELLOW}[9] ข้อมูลโค้ด VPS${NC}"
+    echo -e "${YELLOW}            [3] สร้างชื่อผู้ใช้ VLESS         ${YELLOW}[10] ทดสอบความเร็ว${NC}"
+    echo -e "${YELLOW}            [4] จัดการ TROJAN              ${YELLOW}[11] เปลี่ยนโดเมน${NC}"
+    echo -e "${YELLOW}            [5] จัดการ SHADOWSOCKS         ${YELLOW}[12] เปลี่ยนแบรนด์เนอร์${NC}"
+    echo -e "${YELLOW}            [6] ระบบที่กำลังทำงาน           ${YELLOW}[13] รีสตาร์ทบริการ${NC}"
+    echo -e "${YELLOW}            [7] สำรองและกู้คืน              ${YELLOW}[14] รีสตาร์ทเซิร์ฟเวอร์${NC}"
+    echo -e "${YELLOW}            [15] เปลี่ยน DNS              ${YELLOW}[16] ตรวจสอบ NETFLIX${NC}"
+    echo -e "${YELLOW}            [17] SWAP RAM                 ${YELLOW}[18] เปลี่ยน XRAYCORE${NC}"
+    echo -e "${YELLOW}            [19] ติดตั้ง UDP               ${YELLOW}[20] ติดตั้ง BBRPLUS${NC}"
+    echo -e "${BLUE}══════════════════════════════════════════════════════════════════════════════════════════${NC}"
+    echo -e "กรุณาเลือกคำสั่งจากเมนู [1-20]: "
 }
-
-# Function: Create SSH OVPN User
-create_ssh_ovpn_user() {
-    echo "Creating SSH OVPN user..."
-    # Add the actual command to create SSH OVPN user
-}
-
-# Function: Create VMESS User
-create_vmess_user() {
-    echo "Creating VMESS user..."
-    # Add the actual command to create VMESS user
-}
-
-# Function: Create VLESS User
-create_vless_user() {
-    echo "Creating VLESS user..."
-    # Add the actual command to create VLESS user
-}
-
-# Add similar functions for other options...
 
 # Main Menu Loop
 while true; do
@@ -91,11 +62,26 @@ while true; do
     read -p "กรอกคำสั่งของคุณ: " choice
 
     case $choice in
-        1) create_ssh_ovpn_user ;;
-        2) create_vmess_user ;;
-        3) create_vless_user ;;
-        # Add cases for other options and call the corresponding functions
-        20) echo "Installing BBRPLUS..." ;;
+        1) echo "Option 1 selected." ;;
+        2) echo "Option 2 selected." ;;
+        3) echo "Option 3 selected." ;;
+        4) echo "Option 4 selected." ;;
+        5) echo "Option 5 selected." ;;
+        6) echo "Option 6 selected." ;;
+        7) echo "Option 7 selected." ;;
+        8) echo "Option 8 selected." ;;
+        9) echo "Option 9 selected." ;;
+        10) echo "Option 10 selected." ;;
+        11) echo "Option 11 selected." ;;
+        12) echo "Option 12 selected." ;;
+        13) echo "Option 13 selected." ;;
+        14) echo "Option 14 selected." ;;
+        15) echo "Option 15 selected." ;;
+        16) echo "Option 16 selected." ;;
+        17) echo "Option 17 selected." ;;
+        18) echo "Option 18 selected." ;;
+        19) echo "Option 19 selected." ;;
+        20) echo "Option 20 selected." ;;
         *) echo -e "${RED}Invalid option!${NC}" ;;
     esac
 done
