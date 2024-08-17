@@ -116,12 +116,12 @@ echo "IP=" >> /var/lib/ipvps.conf
 
 echo ""
 clear
-    echo -e "$BBlue                     SETUP DOMAIN VPS     $NC"
+    echo -e "$BBlue                     ตั้งค่าใส่ โดเมน     $NC"
     echo -e "$BYellow----------------------------------------------------------$NC"
-    echo -e "$BGreen 1. Use Domain Random / Gunakan Domain Random $NC"
-    echo -e "$BGreen 2. Choose Your Own Domain / Gunakan Domain Sendiri $NC"
+    echo -e "$BGreen 1. ใช้โดเมนสุ่ม $NC"
+    echo -e "$BGreen 2. ใส่โดเมนตัวเอง $NC"
     echo -e "$BYellow----------------------------------------------------------$NC"
-    read -rp " Pilih domain yang akan kamu pakai : " dns
+    read -rp " ใส่โดเมน : " dns
 	if test $dns -eq 1; then
     clear
     apt install jq curl -y
@@ -246,7 +246,7 @@ echo "   - Trojan gRPC              : 443" | tee -a log-install.txt
 echo "   - Shadowsocks gRPC         : 443" | tee -a log-install.txt
 echo ""
 echo "=============================Contact==============================" | tee -a log-install.txt
-echo "---------------------------t.me/givpn-----------------------------" | tee -a log-install.txt
+echo "---------------------------ทำโดย-เจฟ.เจฟ-----------------------------" | tee -a log-install.txt
 echo "==================================================================" | tee -a log-install.txt
 echo -e ""
 echo ""
