@@ -26,7 +26,7 @@ commonname=none
 email=none
 
 # simple password minimal
-curl -sS https://raw.githubusercontent.com/givpn/AutoScriptXray/master/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
+curl -sS https://raw.githubusercontent.com/boomzvpn789/aaaaaa/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -134,13 +134,13 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/givpn/AutoScriptXray/master/ssh/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/ssh/nginx.conf"
 mkdir -p /home/vps/public_html
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/givpn/AutoScriptXray/master/ssh/newudpgw"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/ssh/newudpgw"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -273,13 +273,13 @@ netfilter-persistent reload
 # download script
 cd /usr/bin
 # menu
-wget -O menu "https://raw.githubusercontent.com/givpn/AutoScriptXray/master/menu/menu.sh"
-wget -O m-vmess "https://raw.githubusercontent.com/givpn/AutoScriptXray/master/menu/m-vmess.sh"
-wget -O m-vless "https://raw.githubusercontent.com/givpn/AutoScriptXray/master/menu/m-vless.sh"
-wget -O running "https://raw.githubusercontent.com/givpn/AutoScriptXray/master/menu/running.sh"
-wget -O clearcache "https://raw.githubusercontent.com/givpn/AutoScriptXray/master/menu/clearcache.sh"
-wget -O m-ssws "https://raw.githubusercontent.com/givpn/AutoScriptXray/master/menu/m-ssws.sh"
-wget -O m-trojan "https://raw.githubusercontent.com/givpn/AutoScriptXray/master/menu/m-trojan.sh"
+wget -O menu "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/menu/menu.sh"
+wget -O m-vmess "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/menu/m-vmess.sh"
+wget -O m-vless "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/menu/m-vless.sh"
+wget -O running "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/menu/running.sh"
+wget -O clearcache "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/menu/clearcache.sh"
+wget -O m-ssws "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/menu/m-ssws.sh"
+wget -O m-trojan "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/menu/m-trojan.sh"
 
 # menu ssh ovpn
 wget -O m-sshovpn "https://raw.githubusercontent.com/givpn/AutoScriptXray/master/menu/m-sshovpn.sh"
