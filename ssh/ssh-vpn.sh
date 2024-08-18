@@ -26,7 +26,7 @@ commonname=none
 email=none
 
 # simple password minimal
-curl -sS https://raw.githubusercontent.com/boomzvpn789/aaaaaa/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
+curl -sS https://raw.githubusercontent.com/boomzvpn789/aaaaaa/main/ssh/password | openssl aes-256-cbc -d -a -pass pass:scvps07gg -pbkdf2 > /etc/pam.d/common-password
 chmod +x /etc/pam.d/common-password
 
 # go to root
@@ -134,13 +134,14 @@ apt -y install nginx
 cd
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
-wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/ssh/nginx.conf"
+wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/main
+/ssh/nginx.conf"
 mkdir -p /home/vps/public_html
 /etc/init.d/nginx restart
 
 # install badvpn
 cd
-wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/ssh/newudpgw"
+wget -O /usr/bin/badvpn-udpgw "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/main/ssh/newudpgw"
 chmod +x /usr/bin/badvpn-udpgw
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7100 --max-clients 500' /etc/rc.local
 sed -i '$ i\screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7200 --max-clients 500' /etc/rc.local
@@ -273,20 +274,20 @@ netfilter-persistent reload
 # download script
 cd /usr/bin
 # menu
-wget -O menu "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/menu/menu.sh"
-wget -O m-vmess "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/menu/m-vmess.sh"
-wget -O m-vless "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/menu/m-vless.sh"
-wget -O running "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/menu/running.sh"
-wget -O clearcache "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/menu/clearcache.sh"
-wget -O m-ssws "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/menu/m-ssws.sh"
-wget -O m-trojan "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/menu/m-trojan.sh"
+wget -O menu "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/main/menu/menu.sh"
+wget -O m-vmess "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/main/menu/m-vmess.sh"
+wget -O m-vless "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/main/menu/m-vless.sh"
+wget -O running "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/main/menu/running.sh"
+wget -O clearcache "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/main/menu/clearcache.sh"
+wget -O m-ssws "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/main/menu/m-ssws.sh
+wget -O m-trojan "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/main/menu/m-trojan.sh"
 
 # menu ssh ovpn
-wget -O m-sshovpn "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/menu/m-sshovpn.sh"
-wget -O usernew "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/ssh/usernew.sh"
-wget -O trial "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/ssh/trial.sh"
-wget -O renew "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/ssh/renew.sh"
-wget -O hapus "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/ssh/hapus.sh"
+wget -O m-sshovpn "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/main/m-sshovpn.sh"
+wget -O usernew "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/main/ssh/usernew.sh"
+wget -O trial "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/main/ssh/trial.sh"
+wget -O renew "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/main/ssh/renew.sh"
+wget -O hapus "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/main/ssh/hapus.sh"
 wget -O cek "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/ssh/cek.sh"
 wget -O member "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/ssh/member.sh"
 wget -O delete "https://raw.githubusercontent.com/boomzvpn789/aaaaaa/ssh/delete.sh"
